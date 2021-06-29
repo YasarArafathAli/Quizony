@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiony.com</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <header id = "header"class="">
+        <nav>
+            <div class="res-top active">
+            <a href="" class="logo">
+                <img src="./images/quizony_logo_black.png" alt="Logo">
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="navToggle()">
+    <i class="fa fa-bars fa-2x"></i>
+  </a>          </div>
+            <div class="nav">
+                <ul>
+                    
+                    <li class="nav-link" ><a href="#" >Categories</a> <div class="dropdown categories">
+                        <div class="dropdown-content">
+                        <div class="cat-list">
+                            <h4>Quizzes</h4>
+                            <ul>
+                                <li class="cat-list-link"><a href="#">All</a></li>
+                                <li class="cat-list-link"><a href="#">Top</a></li>
+                                <li class="cat-list-link"><a href="#">Users Quizzes</a></li>
+                                <li class="cat-list-link"><a href="#">Women</a></li>
+                                <li class="cat-list-link"><a href="#">Couples</a></li>
+                                <li class="cat-list-link"><a href="#">Trivia</a></li>
+                                <li class="cat-list-link"><a href="#">Sport</a></li>
+                                <li class="cat-list-link"><a href="#">Music</a></li>
+                            </ul>
+                        <!-- </div><div class="cat-list"> -->
+                            <h4>Popular Tags</h4>
+                            <ul>
+                                <li class="cat-list-link"><a href="#">Girls</a></li>
+                                <li class="cat-list-link"><a href="#">Friends</a></li>
+                                <li class="cat-list-link"><a href="#">Fun</a></li>
+                                <li class="cat-list-link"><a href="#">Love</a></li>
+                                <li class="cat-list-link"><a href="#">Lifestyle</a></li>
+                                <li class="cat-list-link"><a href="#">Food</a></li>
+                            </ul>
+                        </div><div class="cat-list">
+                            <h4>Stories</h4>
+                            <ul>
+                                <li class="cat-list-link"><a href="#">All</a></li>
+                                <li class="cat-list-link"><a href="#">Horror</a> </li>
+                                <li class="cat-list-link"><a href="#">Action</a></li>
+                                <li class="cat-list-link"><a href="#">Poetry</a></li>
+                                <li class="cat-list-link"><a href="#">Fantasy</a></li>
+                                <li class="cat-list-link"><a href="#">Romance</a></li>
+                                <li class="cat-list-link"><a href="#">Adventure</a></li>
+                                <li class="cat-list-link"><a href="#">Humor</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div></li>
+                    
+                    <li class="nav-link"><a href="#">Create</a><div class="dropdown create">
+                        <div class="dropdown-content">
+                            <ul>
+                                <li class="cat-list-link"><a href="#">All</a></li>
+                                <li class="cat-list-link"><a href="#">Top</a></li>
+                                <li class="cat-list-link"><a href="#">Users Quizzes</a></li>
+                                <li class="cat-list-link"><a href="#">Women</a></li>
+                                <li class="cat-list-link"><a href="#">Couples</a></li></ul>
+                        </div></div></li>
+                    <li class="nav-link"><a href="#">Waiting Room</a></li>
+                    <li class="nav-link"><a href="#">Our Story</a></li>
+                    <li class="nav-link"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                </ul>
+                <ul>
+                    <li id="signup-btn"><a href="#"><strong>Sign up</strong></a></li>
+                    <li  id="login-btn"><a href="#">Log in</a></li>
+                </ul>
+            </nav>
+
+            </div>
+
+            <div class="modal signupmodal" id="signup-modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="./images/logo.png" alt="small-logo">
+                    <h2>Welcome to Quizony</h2>
+                    <form action="#">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <input type="email" placeholder="Email">
+                        <input class ="btn" type="submit" value="Sign Up">
+                        
+                    </form>
+                    <p>OR</p>
+                    <button class="btn google-btn">
+                        <div class="Glogo-outer">
+                            <div class="Glogo-inner">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 48 48" class="abcRioButtonSvg"><g><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path><path fill="none" d="M0 0h48v48H0z"></path></g></svg>
+                            </div>
+                        </div>
+                        <div>
+                            Sign up
+                        </div>
+                    </button>
+                    <p class="small">By continuining, you agree to Quizony's <a href="#">Privacy Policy</a> and <a href="#">Cookie Use</a> </p>
+                      <p class="medium">Already on Quizony? <a id="inner-login-btn" href="#">Log In</a></p>
+
+                </div>
+            </div>
+            <div class="modal loginmodal" id="login-modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="./images/logo.png" alt="small-logo">
+                    <h2>Welcome to Quizony</h2>
+                    <form action="#">
+                        <input type="text" placeholder="Username or Email">
+                        <input type="password" placeholder="Password">
+                        <p class="small"><a href="#">Forgot you password?</a> </p>
+                        <input class ="btn" type="submit" value="Log in">
+                        
+                    </form>
+                    <p>OR</p>
+                    <button class="btn google-btn">
+                        <div class="Glogo-outer">
+                            <div class="Glogo-inner">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 48 48" class="abcRioButtonSvg"><g><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path><path fill="none" d="M0 0h48v48H0z"></path></g></svg>
+                            </div>
+                        </div>
+                        <div>
+                            Log in
+                        </div>
+                    </button>
+                      <p class="small">By continuining, you agree to Quizony's <a href="#">Privacy Policy</a> and <a href="#">Cookie Use</a> </p>
+                      <p class="medium">Not on Quizony yet? <a id="inner-signup-btn" href="#">Sign up</a></p>
+                </div>
+            </div>
+    </header>
+    <div class = "res-nav">
+        <div class="filters">
+                <div class="categories">
+                    <div class="category-row">
+                        <a href="#" class="category active">All</a>
+                        <a href="#" class="category">Women</a>
+                        <a href="#" class="category">Men</a>
+                        <a href="#" class="category">Couples</a>
+                        <a href="#" class="category">Adults</a>
+                        <a href="#" class="category">Kids</a>
+                        <a href="#" class="category">Living</a>
+                        <a href="#" class="category">Personality</a>
+                        <a href="#" class="category">Hobby</a>
+                        <a href="#" class="category">Relationship</a>
+                        <a href="#" class="category">Animals</a>
+                        <a href="#" class="category">Travel</a>
+                        <a href="#" class="category">Film</a>
+                        <a href="#" class="category">Politics</a>
+                        <a href="#" class="category">History</a>
+                        <a href="#" class="category">Sport</a>
+                        <a href="#" class="category">Girls</a>
+                        <a href="#" class="category">Trivia</a>
+                        <a href="#" class="category">Health</a>
+                        <a href="#" class="category">Teens</a>
+                        <a href="#" class="category">Food</a>
+                        <a href="#" class="category">Music</a>
+                        <a href="#" class="category">Technology</a>
+                        <a href="#" class="category">Education</a>
+                        <a href="#" class="category">Career</a>
+                        <a href="#" class="category">Entertainment</a>
+                        <a href="#" class="category">Other</a>
+                    </div>
+                </div>    
+    
+    </div>
+    </div>
+    <section class="main">
+        <main>
+            <h1>Quizzes For Women</h1>
+            <div id="menu" class="quizzes-menu">
+                <!-- <div class="quiz-card-outer">
+                    <div class="quiz-card">
+                        <a href="#">
+                            <div class="head-info">
+                                <span class="tag quiz">Quiz</span>
+                                <img src="./images/what-s-my-aesthetic-small.jpg" alt="quiz1">
+                                <span class="time">1 Month ago</span>
+                            </div>
+                            <div class="quiz-info">
+                                <h4>Quiz Title</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis asperiores natus
+                                    vel officia velit distinctio.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="stats">
+                        <div class="trending"><i class="fa fa-list" aria-hidden="true"></i><span
+                                class="trend-num">12</span></div>
+                        <div class="seen"><i class="fa fa-eye" aria-hidden="true"></i><span
+                                class="seen-num">232323</span></div>
+                        <div class="likes"><i class="fas fa-thumbs-up "></i><span class="likes-num">22</span></div>
+                        <div class="user"><i class="fa fa-user" aria-hidden="true"></i><span
+                                class="user-name">abc</span></div>
+                    </div>
+
+                </div> -->
+
+               
+
+
+
+
+
+
+            </div>
+        </main>
+        <aside>
+            <div class="filter-nav">
+                <ul>
+                    <li class="filter-link active"><a href="#">All</a></li>
+                    <li class="filter-link"><a href="#">Quizzes</a></li>
+                    <li class="filter-link"><a href="#">Stories</a></li>
+                    <li class="filter-link"><a href="#">Top Quizzes</a></li>
+                    <li class="filter-link"><a href="#">Waiting Room</a></li>
+                </ul>
+            </div>
+            <div class="filters">
+                <h3 class="filter-heading">Quiz Categories</h3>
+                <div class="categories">
+                    <div class="category-row">
+                        <a href="#" class="category active">Women</a>
+                        <a href="#" class="category">Men</a>
+                        <a href="#" class="category">Couples</a>
+                        <a href="#" class="category">Adults</a>
+                    </div>
+                    <div class="category-row">
+                        <a href="#" class="category">Kids</a>
+                        <a href="#" class="category">Living</a>
+                        <a href="#" class="category">Personality</a>
+                        <a href="#" class="category">Hobby</a>  
+                    </div>
+
+                    <div class="category-row">
+                        <a href="#" class="category">Relationship</a>
+                        <a href="#" class="category">Animals</a>
+                        <a href="#" class="category">Travel</a>
+                        <a href="#" class="category">Film</a>
+                    </div>
+
+                    <div class="category-row">
+                        <a href="#" class="category">Politics</a>
+                        <a href="#" class="category">History</a>
+                        <a href="#" class="category">Sport</a>
+                        <a href="#" class="category">Girls</a>
+                    </div>
+
+                    <div class="category-row">
+                        <a href="#" class="category">Trivia</a>
+                        <a href="#" class="category">Health</a>
+                        <a href="#" class="category">Teens</a>
+                        <a href="#" class="category">Food</a>
+                    </div>
+
+                    <div class="category-row">
+                        <a href="#" class="category">Music</a>
+                        <a href="#" class="category">Technology</a>
+                        <a href="#" class="category">Education</a>
+                    </div>
+
+                    <div class="category-row">
+                        <a href="#" class="category">Career</a>
+                        <a href="#" class="category">Entertainment</a>
+                        <a href="#" class="category">Other</a>
+                    </div>
+                </div>
+                <h3 class="filter-heading">Top Quizzes</h3>
+
+                <div class="top-quizes">
+                    <div class="small-quiz-card">
+                        <img src="./images/anime-name-generator-small.jpg" alt="">
+                        <div class="small-card-info">
+                            Lorem ipsum dolor sit amet, consectetur?
+                        </div>
+                    </div>
+                    <div class="small-quiz-card">
+                        <img src="./images/anime-name-generator-small.jpg" alt="">
+                        <div class="small-card-info">
+                            Lorem ipsum dolor sit amet, consectetur?
+                        </div>
+                    </div>
+                    <div class="small-quiz-card">
+                        <img src="./images/anime-name-generator-small.jpg" alt="">
+                        <div class="small-card-info">
+                            Lorem ipsum dolor sit amet, consectetur?
+                        </div>
+                    </div>
+                    <div class="small-quiz-card">
+                        <img src="./images/anime-name-generator-small.jpg" alt="">
+                        <div class="small-card-info">
+                            Lorem ipsum dolor sit amet, consectetur?
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3 class="filter-heading">Story Genres</h3>
+                <div class="categories">
+                    <div class="category-row">
+                        <a href="#" class="category">Action</a>
+                        <a href="#" class="category">Adventure</a>
+                        <a href="#" class="category">Romance</a>
+                        <a href="#" class="category">Long</a>
+                    </div>
+                    <div class="category-row">
+                        <a href="#" class="category">Historical</a>
+                        <a href="#" class="category">Horror</a>
+                        <a href="#" class="category">Humor</a>
+                        <a href="#" class="category">Mystery</a>
+                    </div>
+
+                    <div class="category-row">
+                        <a href="#" class="category">Nonfiction</a>
+                        <a href="#" class="category">Poetry</a>
+                        <a href="#" class="category">Realistic</a>
+                        <a href="#" class="category">Fantasy</a>
+                    </div>
+                    <div class="category-row">
+                        <a href="#" class="category">Fanfiction</a>
+                        <a href="#" class="category">Thriller</a>
+                        <a href="#" class="category">Challenges</a>
+                    </div>
+                    <div class="category-row">
+                        <a href="#" class="category">Science Fiction</a>
+                        <a href="#" class="category">Short Stories</a>
+                    </div>
+                </div>
+
+                <h3 class="filter-button">Create Quiz</h3>
+
+                <h3 class="filter-heading">Popular tags</h3>
+                <div class="categories">
+                    <div class="category-row">
+                        <a href="#" class="category">Girls</a>
+                        <a href="#" class="category">Friends</a>
+                        <a href="#" class="category">Fun</a>
+                        <a href="#" class="category">Teen</a>
+                    </div>
+                    <div class="category-row">
+                        <a href="#" class="category">Love</a>
+                        <a href="#" class="category">Personality</a>
+                        <a href="#" class="category">Food</a>
+                        <a href="#" class="category">History</a>
+                    </div>
+
+                    <div class="category-row">
+                        <a href="#" class="category">Name</a>
+                        <a href="#" class="category">Generator</a>
+                        <a href="#" class="category">Character</a>
+                        <a href="#" class="category">Lifestyle</a>
+                    </div>
+                    <div class="category-row">
+                        <a href="#" class="category">Religion</a>
+                        <a href="#" class="category">Music</a>
+                        <a href="#" class="category">Style</a>
+                        <a href="#" class="category">Animals</a>
+                    </div>
+                    <div class="category-row">
+                        <a href="#" class="category">Knowledge</a>
+                        <a href="#" class="category">Pets</a>
+                        <a href="#" class="category">Tradition</a>
+                        <a href="#" class="category">Life</a>
+                        
+                    </div>
+
+                     <div class="category-row">
+                        <a href="#" class="category">Culture</a>
+                        <a href="#" class="category">Literature</a>
+                        <a href="#" class="category">Fashion</a>
+                        <a href="#" class="category">Family</a>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </aside>
+
+    </section>
+    <footer>
+
+        <div class="footer-nav">
+                    <a class="footer-nav" href="#" class="category">Home</a>|
+                    <a class="footer-nav" href="#" class="category">Advertise</a>|
+                    <a class="footer-nav" href="#" class="category">Contact</a>|
+                    <a class="footer-nav" href="#" class="category">About</a>|
+                    <a class="footer-nav" href="#" class="category">Privacy Policy</a>|
+                    <a class="footer-nav" href="#" class="category">Cookie Policy</a>|
+
+        </div>
+        <div class="copyright"><a href="#">quizony.com</a> © <script>var d = new Date();
+        document.write(d.getFullYear())</script>. All Rights Reserved.</div>
+    </footer>
+
+    <script src="./quiz-list.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

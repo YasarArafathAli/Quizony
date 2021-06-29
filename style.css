@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #909090;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor:pointer;
+}
+
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: #f1f1f1;
+
+}
+/* ==============================NAVBAR=========================== */
+
+header{
+border: 1px solid #dddddd;
+position: fixed;
+background-color: #f1f1f1;
+z-index: 10;
+width: 100vw;
+height: 50px;
+padding: 0 auto;
+margin: 0;
+}
+nav{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 1175px;
+}
+nav .nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header a img{
+    width: 9rem;
+    padding: 5px;
+}
+
+header nav .nav>ul{
+    margin-left: 180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    letter-spacing:1px;
+    font-weight: 300;
+
+}
+
+header a:hover{
+    font-weight: 400;
+
+}
+
+header ul li{
+    padding: 0 10px;
+}
+
+.res-top .icon,
+.res-nav {
+    display: none;
+}
+
+
+
+
+.nav-link{
+    position: relative;
+}
+
+.dropdown{
+    display: none;
+    visibility: hidden;
+    background: #f1f1f1;
+    position: absolute;
+    top: 25px;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 1px #dadada;
+    z-index: 10;
+
+}
+header .dropdown a:hover {
+    font-weight: 400;
+    background: #d1cfcf
+}
+
+
+
+.nav-link:hover .dropdown{
+    display: block;
+    visibility: visible;
+}
+.dropdown.categories{
+    right: -125px;
+}
+
+.dropdown.categories .dropdown-content{
+    display: flex;
+    width: 400px;
+
+}
+
+.dropdown.create .dropdown-content {
+    display: flex;
+    width: 200px;
+     left: 25px;
+
+}
+.dropdown .cat-list{
+    width: 100%;
+}
+.dropdown .cat-list h4{
+    padding: 5px;
+}
+
+.dropdown .cat-list .cat-list-link   {
+    padding: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 400px;
+    border-radius: 10px;
+
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-content img{
+    width: 40px;
+    margin: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-content h2{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.modal-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content form input{
+    width: 200px;
+    padding: 6px 12px;
+    height: 40px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    margin: 5px;
+
+}
+
+.modal-content a{
+    color: #428bca;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
+.modal-content .small {
+font-size: 10px;
+text-align: center;
+width: 200px;
+margin: 5px auto;
+}
+
+.modal-content .medium{
+font-size: 12px;
+margin: 10px;
+
+}
+.modal-content form input.btn, .btn.google-btn{
+    border-radius: 15px;
+    height: 30px;
+    background-color: #E60021;
+    color: white;
+    width: 200px;
+    margin: 10px auto;
+    border: 0;
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    }
+
+    button.btn.google-btn{
+        background-color:rgba(189, 189, 189, 0.5);
+        display: flex;
+        justify-content: space-between;
+        padding: 6px;
+        color: #000;
+    }
+
+    button.btn.google-btn div:last-of-type{
+        width: 100%;
+    }
+/* ============================MAIN LAYOUT================================ */
+.main{
+
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    width: 1175px;
+}
+main{
+    width: 66%;
+    margin: 20px 40px 20px 0;
+}
+
+
+
+/* ==================================QUIZ MENU=============================== */
+
+main h1{
+   font-size: 2.2rem;
+   font-weight: 400;
+   text-align: center;
+   padding: 10px 30px;
+}
+
+.quizzes-menu{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 30px;
+}
+
+
+
+.quizzes-menu .quiz-card-outer .stats{
+    display: flex;
+    justify-content: space-around;
+    font-size:12px;
+    padding: 5px;
+}
+
+.quizzes-menu .quiz-card-outer .stats span{
+    padding: 10px;
+
+}
+
+.quizzes-menu .quiz-card {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #dadada;
+    box-shadow: 0px 0px 4px 1px #dadada;
+    height: 100%;
+}
+.quiz-card .head-info{
+    position: relative;
+}
+.tag.quiz{
+    position: absolute;
+    right: 7px;
+    font-size: 12px;
+    padding: 4px 10px;
+    background-color: rgb(25, 158, 43);
+    color: #ffffff;
+}
+
+.time{
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    bottom: 28px;
+    left: 5px;
+    background-color: rgba(244, 244, 244, 0.8);
+    padding:5px;
+}
+.quizzes-menu .quiz-card img{
+    width: 100%;
+}
+
+.quizzes-menu .quiz-card .quiz-info{
+    text-align: center;
+    padding: 0 25px 20px 25px;
+}
+
+.quizzes-menu .quiz-card .quiz-info h4{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 10px 15px 10px;
+}
+
+.quizzes-menu .quiz-card .quiz-info p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+/* ======================================ASIDE LAYOUT================================= */
+
+aside {
+    width: 33%;
+    padding: 50px 30px; 
+}
+
+aside .filter-nav{
+    background-color: #ffffff;
+    border: 1px solid #99999980;
+    border-bottom: none;
+}
+
+aside .filter-nav li.filter-link{
+
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 1px solid #99999980;
+}
+
+aside .filter-nav li.filter-link.active{
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.filters .filter-heading,
+.filters .filter-button {
+    text-align: center;
+    margin: 30px 0 10px 0;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.filters .filter-button{
+    width: 200px;
+    margin: 50px auto;
+    background-color:#30c553;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.4em 1em ;
+}
+
+.filters .categories{
+    background-color:#fff;
+    width: 100%;
+border-top: 1px solid #dadada;
+border-left: 1px solid #dadada;
+
+}
+
+aside .filters .categories .category-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: no-wrap;
+    overflow: hidden;
+    border-bottom: 1px solid #dadada;
+
+}
+.filters .categories a{
+  border-right: 1px solid #dadada;
+  padding: 5px 10px;
+  margin:0;
+  background-color: #ffffff;
+}
+
+.filters .categories a.active {
+    font-weight: 600;
+    background-color:#eee
+
+}
+.filters .categories a:hover {
+    background-color: #eee
+}
+.top-quizes{
+    background-color: transparent;
+}
+
+.small-quiz-card{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    box-shadow: 0px 0px 4px 1px #dadada;
+    margin: 4px;
+}
+
+.small-quiz-card img{
+    width: 45%;;
+}
+
+.small-quiz-card .small-card-info{
+    padding: 10px;
+}
+
+
+/* ======================Footer======================= */
+
+footer{
+    width:100%;
+    margin-top: 50px;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    padding: 30px;
+    color:rgba(143, 138, 138, 0.8);
+}
+
+footer .footer-nav a,
+footer .copyright a {
+    color: #428bca;
+    padding: 5px 10px;
+}
+
+footer .copyright{
+    padding: 15px;
+}
+
+ /* ========================MEDIA QUERIES============*/
+
+ @media screen and (max-width:768px) {
+    
+     nav,
+     nav ul,.main,
+     main,
+     .quizzes-menu {
+         width: 100%;
+         display: block;
+     }
+     header{
+         transition: all .2s ease-in-out;
+
+     }
+     header.active{
+         height: 250px;
+         transition: all .1s ease-in-out;
+     }
+     nav ul{
+         text-align: center;
+     }
+     nav ul li{
+         padding:3px;
+     }
+     header nav .nav{
+        display: none;
+         transition: all .2s ease-in-out;
+
+     }
+     header.active nav .nav {
+         display: block;
+         transition: all 1.2s ease-in-out;
+
+     }
+
+     .nav>ul{
+        flex-direction: column;
+        margin-left:0 !important;
+    }
+     .res-top {
+         display: flex;
+         justify-content: space-between
+     }
+
+     .res-top .icon {
+         display: block;
+         padding: 8px;
+     }
+     .res-nav {
+         display:block;
+         padding-top: 50px;
+     }
+
+     .res-nav .filters .category-row {
+         width: 100vw;
+         overflow-x: auto;
+         white-space: nowrap;
+     }
+
+     .res-nav .filters .categories .category-row {
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: nowrap;
+         border-bottom: 1px solid #dadada;
+
+     }
+
+     .res-nav .category-row a {
+         display: inline-block;
+
+     }
+
+     .res-nav .category-row::-webkit-scrollbar {
+         height: 8px;
+     }
+
+     .res-nav .category-row::-webkit-scrollbar-track {
+         background: #f1f1f1;
+     }
+
+     .res-nav .category-row::-webkit-scrollbar-thumb {
+         background: #909090;
+     }
+
+     .res-nav .category-row::-webkit-scrollbar-thumb:hover {
+         background: #555;
+     }
+     footer {
+         width: 100%;
+         margin-top: 150px;
+    }
+ }
+  @media screen and (max-width:1024px) {
+
+      .main,
+      main {
+          width: 100%;
+          display: block;
+      }
+      aside{
+          width: 70%;
+          margin: auto;
+      }
+      nav{
+          justify-content: space-around;
+          width: 80vw;
+      }
+      header ul{
+          margin: auto;
+      }
+  }
