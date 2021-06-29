@@ -226,6 +226,10 @@ header .dropdown a:hover {
 
 }
 
+.modal-content form input:focus {
+    outline: none;
+    box-shadow: 0 0 3pt 1pt rgba(58, 158, 216, 0.397);
+}
 .modal-content a{
     color: #428bca;
 }
