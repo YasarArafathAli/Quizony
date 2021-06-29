@@ -234,14 +234,14 @@ header .dropdown a:hover {
     text-decoration: underline;
 }
 .modal-content .small {
-font-size: 10px;
+font-size: 12px;
 text-align: center;
-width: 200px;
+width: 250px;
 margin: 5px auto;
 }
 
 .modal-content .medium{
-font-size: 12px;
+font-size: 14px;
 margin: 10px;
 
 }
@@ -268,6 +268,7 @@ margin: 10px;
 
     button.btn.google-btn div:last-of-type{
         width: 100%;
+
     }
 /* ============================MAIN LAYOUT================================ */
 .main{
