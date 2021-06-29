@@ -44,7 +44,7 @@ innerLoginBtn.onclick = function() {
 }
 
 signupClose.onclick = function() {
-  signupModal.style.display = "none";
+    signupModal.style.display = "none";
 }
 
 loginClose.onclick = function() {
